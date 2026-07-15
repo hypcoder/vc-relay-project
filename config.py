@@ -1,0 +1,25 @@
+import os
+
+# --- API DETAILS ---
+API_ID = int(os.environ.get("API_ID", 30875311))
+API_HASH = os.environ.get("API_HASH", "2263d3987058e2cc2b460e9c1d81faa7")
+SESSION_STRING = os.environ.get("SESSION_STRING", "BQFZuDsAnlWUYwvKnPvSwCajwARUJVi30tVP9i52T5w8CIHl2mLL-r6N6GmsPJnBSOjT-TI6AqhA6klJJi0tSkKLVmdL_AAhObzdUOgkERxjHF3d_H6kbNZjH2JXAM00uNIsKoEh9FM-BuoV-hYKeflxxOgQJhc2aGRwE0Mvx7DZcegbFex0XWgULbk2aoDLyrvXNhEdoqDh2bzJNsTAcoFoW776T5VFaKkgU2qkEIxcGi_1EaqllSO2TSZ19clGN1OPqAf7W0stONXFizQ5jtasgCX0CdRwHtIg7SKgLTl4xOPwDYAbiyzqGT15-SwTZ9Bx6xOLIXFjI_MmQ8ZC-z30zZDB5wAAAAIRmgumAA")
+
+# --- BOT & GROUP DETAILS ---
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "8910903475:AAGPWts0Da8N2ODkWqLXQhKnkAIHKAwuBBU")
+OWNER_ID = int(os.environ.get("OWNER_ID", 8898007647))
+PRIVATE_GROUP_ID = int(os.environ.get("PRIVATE_GROUP_ID", -1004312851361))
+
+# ─── DEFAULT AUDIO SETTINGS ───
+DEFAULT_VOLUME = 400.0  # Volume: 400x
+DEFAULT_GAIN = 150      # Master pre-amp
+DEFAULT_BASS = 100      # 100dB boost at 100Hz
+DEFAULT_CLARITY = 100   # 100dB boost at 2kHz
+
+# ─── Audio Format ───
+SAMPLE_RATE = 48000
+CHANNELS = 2
+SAMPLE_WIDTH = 2        # 16-bit PCM
+SAMPLE_FORMAT = "s16le"
+
+active_relays = {}
