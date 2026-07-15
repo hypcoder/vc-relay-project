@@ -1,6 +1,9 @@
-FROM python:3.10-slim
-RUN apt-get update && apt-get install -y ffmpeg git
-WORKDIR /app
-COPY . .
-RUN pip install --no-cache-dir -r requirements.txt
-CMD ["python3", "main.py"]
+FROM python:3.9
+RUN apt update && apt upgrade -y
+RUN apt install python3-pip ffmpeg -y
+RUN mkdir /app/
+COPY . /app/
+WORKDIR /app/
+RUN pip3 install --upgrade pip
+RUN pip3 install -U -r requirements.txt
+CMD python3 main.py
