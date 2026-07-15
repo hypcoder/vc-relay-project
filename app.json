@@ -1,0 +1,42 @@
+{
+  "name": "VC-Relay-Bot",
+  "description": "Voice Chat Relay Bot for Telegram",
+  "keywords": ["telegram", "voice", "bot"],
+  "repository": "https://github.com/hypcoder/vc-relay-project",
+  "stack": "container",
+  "env": {
+    "API_ID": {
+      "description": "Your Telegram API ID",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Your Telegram API Hash",
+      "required": true
+    },
+    "SESSION_STRING": {
+      "description": "Your Pyrogram Session String",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Your Telegram Bot Token",
+      "required": true
+    },
+    "PRIVATE_GROUP_ID": {
+      "description": "Your Private Group ID",
+      "required": true
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    },
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
